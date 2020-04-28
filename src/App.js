@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
-import Ninja from './Ninja'
-import AddNinja from './AddNinja';
+import Header from './components/view/header';
+import Slider from './components/view/slider';
+import Produtos from './components/view/produtos';
+import Barner from './components/view/barner';
+import MoreSells from './components/view/mais_vendidos';
+import Solicitados from './components/view/maissolicitados';
+import ForaStoque from './components/view/forastoque';
+import Semana from './components/view/semana';
+import Footer from './components/view/Footer';
+import Hero from './components/view/herobutton'
+import HeroTwo from './components/view/herobutton2'
 
 //Referred to as container component, has a state{data}
 class App extends Component {
-  state = {
-    ninjas: [
-      {name: 'BlvckChocolvte', age: 25, belt: 'Blue', id: 1},
-      {name: 'Miles', age: 15, belt: 'Yellow', id: 2},
-      {name: 'Mary Jane', age: 20, belt: 'Black', id: 3},
-      {name: 'John Doe', age: 35, belt: 'Red', id: 4},
-    ]
-  }
+  
   render(){
     return (
       <div className="App">
-        <h1>React Ninja</h1>
-        <p>Welcome :)</p>
-        <AddNinja />
-        <Ninja ninjas={ this.state.ninjas } />
+        <Header/>
+        <Slider/>
+        <Barner/>
+        <MoreSells />
+        <Solicitados/>
+        <ForaStoque/>
+         <Hero/>
+        <Footer/>
+        
       </div>
       
     );
